@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "data/", "/vagrant", type: "virtualbox"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
 	  yum install vim wget tree java-1.8.0-openjdk java-1.8.0-openjdk-devel -y
 	  yum groupinstall "Development Tools" -y
 	  mkdir -p {'/home/vagrant/bin','/home/vagrant/download','/home/vagrant/workspace'}
-	  wget -o '/home/vagrant/download/apache-maven-3.5.0-bin.zip' http://mirror.ventraip.net.au/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.zip
+	  wget -O '/home/vagrant/download/apache-maven-3.5.0-bin.zip' http://mirror.ventraip.net.au/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.zip
 	  
   SHELL
 end
