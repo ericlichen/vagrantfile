@@ -73,7 +73,5 @@ Vagrant.configure("2") do |config|
 	  yum -y install ruby perl-devel python-devel ruby-devel perl-ExtUtils-Embed ncurses-devel
 	  yum -y install java-1.8.0-openjdk
 	  curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
-  #   apt-get update
-  #   apt-get install -y apache2
   SHELL
 end
